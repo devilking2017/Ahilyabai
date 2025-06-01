@@ -1,0 +1,221 @@
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f695b993ef3ed5c3deed91dcc4438c84',
+		'format' : 'iframe',
+		'height' : 50,
+		'width' : 320,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//moundconclusive.com/f695b993ef3ed5c3deed91dcc4438c84/invoke.js"></script>
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8" />
+  <title>जय हो माँ अहिल्याबाई होल्कर</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Baloo+2&display=swap');
+
+    body {
+      margin: 0;
+      font-family: 'Baloo 2', cursive;
+      background: linear-gradient(to bottom right, #e0f7fa, #ffe0f0);
+      color: #222;
+      text-align: center;
+      padding: 20px;
+    }
+
+    h1, .message, .sender {
+      text-shadow: 0 0 10px #ff0066, 0 0 20px #ff66cc;
+      animation: glow 1.5s ease-in-out infinite alternate;
+    }
+
+    @keyframes glow {
+      from { text-shadow: 0 0 10px #ff0066, 0 0 20px #ff66cc; }
+      to { text-shadow: 0 0 20px #ff33aa, 0 0 30px #ff99cc; }
+    }
+
+    img {
+      max-width: 90%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+      margin-bottom: 20px;
+    }
+
+    .message {
+      font-size: 1.2em;
+      color: #b22222;
+      margin: 15px 0 25px;
+      line-height: 1.6;
+    }
+
+    .input-box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 10px;
+    }
+
+    input {
+      padding: 10px;
+      border: 1px solid #aaa;
+      border-radius: 6px;
+      width: 80%;
+      max-width: 300px;
+      font-size: 1em;
+    }
+
+    button {
+      margin-top: 10px;
+      padding: 10px 20px;
+      font-size: 1em;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      opacity: 0.9;
+    }
+
+    .generate-btn {
+      background-color: #007bff;
+      color: white;
+    }
+
+    .generate-btn:hover {
+      background-color: #0056b3;
+    }
+
+    .link-box {
+      margin-top: 20px;
+      word-break: break-word;
+      font-size: 0.95em;
+      text-align: center;
+    }
+
+    .sender {
+      font-size: 1.2em;
+      margin-top: 10px;
+      color: #ff1493;
+    }
+
+    .copy-btn, .share-btn {
+      margin-top: 10px;
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 1em;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .copy-btn {
+      background-color: #008CBA;
+    }
+
+    .copy-btn:hover {
+      background-color: #0078a8;
+    }
+
+    .share-btn {
+      background-color: #25D366;
+      padding: 8px 14px;
+      font-size: 0.9em;
+    }
+
+    .share-btn:hover {
+      background-color: #1ebc59;
+    }
+
+    .whatsapp-icon {
+      width: 18px;
+      height: 18px;
+    }
+  </style>
+</head>
+<body>
+  <h1>जय हो माँ अहिल्याबाई होल्कर</h1>
+
+  <img src="ahilyabai.jpg" alt="Maa Ahilyabai Holkar" />
+
+  <div class="message">
+    आज हम एक महान आत्मा, रानी अहिल्या बाई होलकर की 300वीं जयंती मना रहे हैं।<br />
+    उनके आदर्शों को याद करें और जीवन में आत्मसात करें। शुभकामनाएं!।
+  </div>
+
+  <div class="sender" id="senderText"></div>
+
+  <div class="input-box">
+    <input type="text" id="nameInput" placeholder="अपना नाम लिखें..." />
+    <button class="generate-btn" onclick="generateLink()">लिंक बनाएं</button>
+  </div>
+
+  <div class="link-box" id="linkBox"></div>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const from = params.get("from");
+
+    if (from) {
+      const senderName = decodeURIComponent(from);
+      document.getElementById("senderText").innerText =
+        "सादर भेजा गया - " + senderName;
+    }
+
+    function generateLink() {
+      const name = document.getElementById("nameInput").value.trim();
+      if (name === "") {
+        alert("कृपया पहले अपना नाम लिखें।");
+        return;
+      }
+
+      const encodedName = encodeURIComponent(name);
+      const currentUrl = window.location.origin + window.location.pathname;
+      const finalUrl = `${currentUrl}?from=${encodedName}`;
+
+      const fullMessage = `${name} द्वारा आपको माँ अहिल्याबाई होलकर की शोभायात्रा के लिए आमंत्रित किया जा रहा है और एक शुभकामनाओं भरा संदेश भेज रहा हूँ।\n\nजय हो माँ अहिल्याबाई होल्कर!\n\nयहाँ क्लिक करें: ${finalUrl}`;
+      const encodedMsg = encodeURIComponent(fullMessage);
+
+      document.getElementById("senderText").innerText =
+        "सादर भेजा गया - " + name;
+
+      document.getElementById("linkBox").innerHTML = `
+        <strong>आपका लिंक:</strong><br />
+        <input type="text" id="copyInput" value="${finalUrl}" readonly style="width:80%; padding:8px; border-radius:6px; margin-top:10px;" /><br />
+        <button class="copy-btn" onclick="copyLink()">कॉपी करें</button>
+        <a href="https://wa.me/?text=${encodedMsg}" target="_blank" class="share-btn">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" class="whatsapp-icon" alt="WhatsApp Icon" />
+          Whatsapp पर भेजें
+        </a>
+        <div id="copyMessage" style="margin-top:5px; color:green;"></div>
+      `;
+    }
+
+    function copyLink() {
+      const copyText = document.getElementById("copyInput");
+      copyText.select();
+      copyText.setSelectionRange(0, 99999);
+      document.execCommand("copy");
+      document.getElementById("copyMessage").innerText = "कॉपी हो गया!";
+    }
+  </script>
+<script type='text/javascript' src='//moundconclusive.com/df/73/9b/df739b889f06a780436224d82309244b.js'></script>
+</body>
+</html>
+<script type="text/javascript">
+	atOptions = {
+		'key' : '7842d4f4ca9069cdbfecfad91683c3d6',
+		'format' : 'iframe',
+		'height' : 60,
+		'width' : 468,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//moundconclusive.com/7842d4f4ca9069cdbfecfad91683c3d6/invoke.js"></script>
